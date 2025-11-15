@@ -1,0 +1,411 @@
+        {
+            "C40001": {
+                "name": "Acetone NF/EP/BP",
+                "testType": "raw-material",
+                "tests": [
+                    {
+                        "test": "Meets NF Requirements",
+                        "specification": "",
+                        "type": "header"
+                    },
+                    {
+                        "test": "Description",
+                        "specification": "Volatile, colourless and sweet smelling liquid having a characteristic odor",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Solubility",
+                        "specification": "Miscible with water and alcohol. with ether with chloroform and with most organic solvents",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Identification A (By IR)",
+                        "specification": "The IR absorption spectrum of the sample obtained should match with that of IR standard should match with that of IR standard spectrum of Acetone",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Identification B (By GC)",
+                        "specification": "The RT of the chromatograph peak of the sample corresponds to the peak in the chromatograph obtained with Standard solution as per IR test for Assay",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Specific Gravity at 25°C",
+                        "specification": "Not more than 0.789",
+                        "range": {
+                            "max": 0.789
+                        },
+                        "type": "numeric"
+                    },
+                    {
+                        "test": "Nonvolatile Residue",
+                        "specification": "Evaporate about 100ml (80g) of Acetone on a water bath until the residue measures about 2ml and does not exceed 2mg (0.0025 %)",
+                        "range": {
+                            "max": 0.0025
+                        },
+                        "type": "numeric",
+                        "unit": "%"
+                    },
+                    {
+                        "test": "Readily Oxidized substances",
+                        "specification": "The permanganate color of the mixture does not completely disappear within 10mins",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Water (H2O) Assay on (CH3)2CO/Calc on Anhydrous Basis",
+                        "specification": "Not more than 0.5%",
+                        "range": {
+                            "max": 0.5
+                        },
+                        "type": "numeric",
+                        "unit": "%"
+                    },
+                    {
+                        "test": "Assay on (CH3)2CO/Calc on Anhydrous Basis",
+                        "specification": "NLT 99.0%",
+                        "range": {
+                            "min": 99.0
+                        },
+                        "type": "numeric",
+                        "unit": "%"
+                    },
+                    {
+                        "test": "Benzene",
+                        "specification": "Not more than 2 ppm",
+                        "range": {
+                            "max": 2
+                        },
+                        "type": "numeric",
+                        "unit": "ppm"
+                    },
+                    {
+                        "test": "Meets EP Chemical Specifications",
+                        "specification": "",
+                        "type": "header"
+                    },
+                    {
+                        "test": "Appearance",
+                        "specification": "Volatile, colourless liquid",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Solubility",
+                        "specification": "Miscible with water and ethanol (96 percent)",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Identification A (By Relative density)",
+                        "specification": "0.790 to 0.793",
+                        "range": {
+                            "min": 0.79,
+                            "max": 0.793
+                        },
+                        "type": "numeric"
+                    },
+                    {
+                        "test": "Identification B (By Chemical test)",
+                        "specification": "An intense red colour is produced which becomes violet with the addition of 5 mL",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Identification C (By chemical test)",
+                        "specification": "A greenish-blue colour is produced",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Aldehydes or Solution",
+                        "specification": "The solution is clear and colourless",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Acidity or Alkalinity",
+                        "specification": "The solution is not or orange",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Density (gml at 20°C",
+                        "specification": "0.790 to 0.793",
+                        "range": {
+                            "min": 0.79,
+                            "max": 0.793
+                        },
+                        "type": "numeric"
+                    },
+                    {
+                        "test": "Related Substances",
+                        "specification": "",
+                        "type": "header"
+                    },
+                    {
+                        "test": "Impurity A",
+                        "specification": "Not more than 0.03%",
+                        "range": {
+                            "max": 0.03
+                        },
+                        "type": "numeric",
+                        "unit": "%",
+                        "detectable": "Not Detected"
+                    },
+                    {
+                        "test": "Impurity B",
+                        "specification": "Not more than 0.05%",
+                        "range": {
+                            "max": 0.05
+                        },
+                        "type": "numeric",
+                        "unit": "%",
+                        "detectable": "Not Detected"
+                    },
+                    {
+                        "test": "Impurity C",
+                        "specification": "Not more than 2 ppm",
+                        "range": {
+                            "max": 2
+                        },
+                        "type": "numeric",
+                        "unit": "ppm",
+                        "detectable": "Not Detected"
+                    },
+                    {
+                        "test": "Impurity E",
+                        "specification": "Not more than 2 ppm",
+                        "range": {
+                            "max": 2
+                        },
+                        "type": "numeric",
+                        "unit": "ppm",
+                        "detectable": "Not Detected"
+                    },
+                    {
+                        "test": "Matter Insoluble in Water",
+                        "specification": "The solution is clear",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Reducing Substances",
+                        "specification": "The mixture is not completely discoloured",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Residue on Evaporation",
+                        "specification": "Maximum 50 ppm",
+                        "range": {
+                            "max": 50
+                        },
+                        "type": "numeric",
+                        "unit": "ppm"
+                    },
+                    {
+                        "test": "Water",
+                        "specification": "Maximum 1 g/L",
+                        "range": {
+                            "max": 1
+                        },
+                        "type": "numeric",
+                        "unit": "g/L"
+                    }
+                ]
+            },
+            "C40002": {
+                "name": "Acetone NF/EP/BP",
+                "testType": "raw-material",
+                "tests": [
+                    {
+                        "test": "Meets NF Requirements",
+                        "specification": "",
+                        "type": "header"
+                    },
+                    {
+                        "test": "Description",
+                        "specification": "Volatile, colourless and sweet smelling liquid having a characteristic odor",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Solubility",
+                        "specification": "Miscible with water and alcohol. with ether with chloroform and with most organic solvents",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Identification A (By IR)",
+                        "specification": "The IR absorption spectrum of the sample obtained should match with that of IR standard should match with that of IR standard spectrum of Acetone",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Identification B (By GC)",
+                        "specification": "The RT of the chromatograph peak of the sample corresponds to the peak in the chromatograph obtained with Standard solution as per IR test for Assay",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Specific Gravity at 25°C",
+                        "specification": "Not more than 0.789",
+                        "range": {
+                            "max": 0.789
+                        },
+                        "type": "numeric"
+                    },
+                    {
+                        "test": "Nonvolatile Residue",
+                        "specification": "Evaporate about 100ml (80g) of Acetone on a water bath until the residue measures about 2ml and does not exceed 2mg (0.0025 %)",
+                        "range": {
+                            "max": 0.0025
+                        },
+                        "type": "numeric",
+                        "unit": "%"
+                    },
+                    {
+                        "test": "Readily Oxidized substances",
+                        "specification": "The permanganate color of the mixture does not completely disappear within 10mins",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Water (H2O) Assay on (CH3)2CO/Calc on Anhydrous Basis",
+                        "specification": "Not more than 0.5%",
+                        "range": {
+                            "max": 0.5
+                        },
+                        "type": "numeric",
+                        "unit": "%"
+                    },
+                    {
+                        "test": "Assay on (CH3)2CO/Calc on Anhydrous Basis",
+                        "specification": "NLT 99.0%",
+                        "range": {
+                            "min": 99.0
+                        },
+                        "type": "numeric",
+                        "unit": "%"
+                    },
+                    {
+                        "test": "Benzene",
+                        "specification": "Not more than 2 ppm",
+                        "range": {
+                            "max": 2
+                        },
+                        "type": "numeric",
+                        "unit": "ppm"
+                    },
+                    {
+                        "test": "Meets EP Chemical Specifications",
+                        "specification": "",
+                        "type": "header"
+                    },
+                    {
+                        "test": "Appearance",
+                        "specification": "Volatile, colourless liquid",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Solubility",
+                        "specification": "Miscible with water and ethanol (96 percent)",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Identification A (By Relative density)",
+                        "specification": "0.790 to 0.793",
+                        "range": {
+                            "min": 0.79,
+                            "max": 0.793
+                        },
+                        "type": "numeric"
+                    },
+                    {
+                        "test": "Identification B (By Chemical test)",
+                        "specification": "An intense red colour is produced which becomes violet with the addition of 5 mL",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Identification C (By chemical test)",
+                        "specification": "A greenish-blue colour is produced",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Aldehydes or Solution",
+                        "specification": "The solution is clear and colourless",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Acidity or Alkalinity",
+                        "specification": "The solution is not or orange",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Density (gml at 20°C",
+                        "specification": "0.790 to 0.793",
+                        "range": {
+                            "min": 0.79,
+                            "max": 0.793
+                        },
+                        "type": "numeric"
+                    },
+                    {
+                        "test": "Related Substances",
+                        "specification": "",
+                        "type": "header"
+                    },
+                    {
+                        "test": "Impurity A",
+                        "specification": "Not more than 0.03%",
+                        "range": {
+                            "max": 0.03
+                        },
+                        "type": "numeric",
+                        "unit": "%",
+                        "detectable": "Not Detected"
+                    },
+                    {
+                        "test": "Impurity B",
+                        "specification": "Not more than 0.05%",
+                        "range": {
+                            "max": 0.05
+                        },
+                        "type": "numeric",
+                        "unit": "%",
+                        "detectable": "Not Detected"
+                    },
+                    {
+                        "test": "Impurity C",
+                        "specification": "Not more than 2 ppm",
+                        "range": {
+                            "max": 2
+                        },
+                        "type": "numeric",
+                        "unit": "ppm",
+                        "detectable": "Not Detected"
+                    },
+                    {
+                        "test": "Impurity E",
+                        "specification": "Not more than 2 ppm",
+                        "range": {
+                            "max": 2
+                        },
+                        "type": "numeric",
+                        "unit": "ppm",
+                        "detectable": "Not Detected"
+                    }
+                    
+                ]
+            }
+        }

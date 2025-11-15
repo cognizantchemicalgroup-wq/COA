@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>COA History</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+        }
+
+        button {
+            padding: 6px 12px;
+            margin-right: 5px;
+            background: #4facfe;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>COA History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date & Time</th>
+                <th>Product Name</th>
+                <th>Product Code</th>
+                <th>Test Type</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="historyTable"></tbody>
+    </table>
+
+    <script>
+        function loadHistory() {
+            const history = JSON.parse(localStorage.getItem("coaHistory")) || [];
+            const tbody = document.getElementById("historyTable");
+            tbody.innerHTML = "";
+
+            history.forEach((item, index) => {
+                const row = `<tr>
+            <td>${item.date}</td>
+            <td>${item.productName}</td>
+            <td>${item.productCode}</td>
+            <td>${item.testType}</td>
+            <td>
+                <button onclick="previewEntry(${index})">Preview</button>
+                <button onclick="editEntry(${index})">Update</button>
+                <button onclick="deleteEntry(${index})" style="background:red;">Delete</button>
+            </td>
+        </tr>`;
+                tbody.innerHTML += row;
+            });
+        }
+
+        function previewEntry(index) {
+            const history = JSON.parse(localStorage.getItem("coaHistory"));
+            const pdf = history[index].pdf;
+            window.open(pdf, "_blank");
+        }
+
+        function downloadEntry(index) {
+            const history = JSON.parse(localStorage.getItem("coaHistory"));
+            const pdf = history[index].pdf;
+
+            const link = document.createElement("a");
+            link.href = pdf;
+            link.download = history[index].productCode + "_" + history[index].batchNo + ".pdf";
+            link.click();
+        }
+
+        function editEntry(index) {
+            localStorage.setItem("editIndex", index);
+            window.location.href = "edit.html"; // Data edit page
+        }
+
+        function deleteEntry(index) {
+            const history = JSON.parse(localStorage.getItem("coaHistory"));
+            history.splice(index, 1);
+            localStorage.setItem("coaHistory", JSON.stringify(history));
+            loadHistory();
+        }
+
+        loadHistory();
+    </script>
+
+</body>
+
+</html>
