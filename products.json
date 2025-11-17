@@ -405,7 +405,67 @@
                         "unit": "ppm",
                         "detectable": "Not Detected"
                     }
-                    
                 ]
+            },
+            "RM2506004": {
+                "name": "Acetone NF/EP/BP",
+                "testType": "raw-material",
+                "tests": [
+                    {
+                        "test": "Description",
+                        "specification": "Transparent, clear colorless, mobile, volatile liquid having a characteristic odor",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Solubility",
+                        "specification": "Miscible with water, with ethanol (96%), with ether, with chloroform and with most volatile oils",
+                        "type": "compliance",
+                        "required": "Complies"
+                    },
+                    {
+                        "test": "Specific Gravity at 25°C",
+                        "specification": "0.791 - 0.793",
+                        "type": "numeric",
+                        "range": {
+                            "min": 0.791,
+                            "max": 0.793
+                        }
+                    },
+                    {
+                        "test": "Non-volatile Residue",
+                        "specification": "Maximum 0.004%",
+                        "type": "numeric",
+                        "range": {
+                            "max": 0.004
+                        },
+                        "unit": "%"
+                    },
+                    {
+                        "test": "Readily Oxidizable Substances",
+                        "specification": "Passes test",
+                        "type": "compliance",
+                        "required": "Passes test"
+                    },
+                    {
+                        "test": "Water (H2O)",
+                        "specification": "Maximum 0.3%",
+                        "type": "numeric",
+                        "range": {
+                            "max": 0.3
+                        },
+                        "unit": "%"
+                    },
+                    {
+                        "test": "Assay (as (CH3)2CO) (Calc on anhydrous basis)",
+                        "specification": "Not less than 99.0%",
+                        "type": "numeric",
+                        "range": {
+                            "min": 99.0
+                        },
+                        "unit": "%"
+                    }
+                ],
+                "remark": "The material complies as per above specifications."
             }
         }

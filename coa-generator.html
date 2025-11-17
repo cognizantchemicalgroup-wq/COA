@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COA Generator - CCPL</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         * {
@@ -343,11 +353,18 @@
             <h2>Enter Product Details</h2>
             <p class="subtitle">Test Type: <span id="testTypeDisplay"></span></p>
 
-            <div class="input-group">
+            <!-- <div class="input-group">
                 <label for="productCode">Product Code:</label>
                 <input type="text" id="productCode" placeholder="Enter product code (e.g., C40001)"
                     onkeyup="validateProductCode()">
+            </div> -->
+
+            <div class="input-group">
+                <label for="productCode">Product Code:</label>
+                <input list="productList" type="text" id="productCode" placeholder="Enter product code (e.g., C40001)">
+                <datalist id="productList"></datalist>
             </div>
+
 
             <div class="input-group">
                 <label for="batchNo">Batch No.:</label>
@@ -361,7 +378,7 @@
 
             <div class="input-group">
                 <label for="expiryDate">Expiry Date:</label>
-                <input type="date" id="expiryDate">
+                <input type="date" id="expiryDate" readonly>
             </div>
 
             <div id="productCodeError" style="color: red; margin-top: 10px; display: none;">Invalid product code. Please
@@ -508,6 +525,23 @@
             const year = date.getFullYear();
             return `${day}.${month}.${year}`;
         }
+
+        document.getElementById("mfgDate").addEventListener("change", function () {
+            let mfg = new Date(this.value);
+
+            if (!isNaN(mfg)) {
+                let expiry = new Date(mfg);
+                expiry.setFullYear(expiry.getFullYear() + 3);
+
+                // Convert to YYYY-MM-DD (required by <input type="date">)
+                let yyyy = expiry.getFullYear();
+                let mm = String(expiry.getMonth() + 1).padStart(2, '0');
+                let dd = String(expiry.getDate()).padStart(2, '0');
+
+                document.getElementById("expiryDate").value = `${yyyy}-${mm}-${dd}`;
+            }
+        });
+
 
         function generateTestTable() {
             const tbody = document.getElementById('testTableBody');
@@ -911,13 +945,48 @@
 
 
         //json code by azr
-        
+
+
+        // async function loadProductDatabase() {
+        //     try {
+        //         const res = await fetch('products.json');
+        //         productDatabase = await res.json();
+        //         console.log("Templates loaded:", productDatabase);
+        //     } catch (e) {
+        //         console.error("JSON load error:", e);
+        //         alert("Failed to load product templates");
+        //     }
+        // }
+
+        // // Load templates when page opens
+        // loadProductDatabase();
+
+
+        // function loadProductDropdown() {
+        //     const dataList = document.getElementById("productList");
+
+        //     dataList.innerHTML = ""; // clear old list
+
+        //     for (let code in productDatabase) {
+        //         let option = document.createElement("option");
+        //         option.value = code;
+        //         option.label = productDatabase[code].name;  // Shows name in dropdown
+        //         dataList.appendChild(option);
+        //     }
+        // }
+
+        // // Call it on page load
+        // loadProductDropdown();
 
         async function loadProductDatabase() {
             try {
                 const res = await fetch('products.json');
                 productDatabase = await res.json();
                 console.log("Templates loaded:", productDatabase);
+
+                // ✅ Load dropdown only after database is ready
+                loadProductDropdown();
+
             } catch (e) {
                 console.error("JSON load error:", e);
                 alert("Failed to load product templates");
@@ -926,6 +995,21 @@
 
         // Load templates when page opens
         loadProductDatabase();
+
+
+        function loadProductDropdown() {
+            const dataList = document.getElementById("productList");
+
+            dataList.innerHTML = ""; // clear old list
+
+            for (let code in productDatabase) {
+                let option = document.createElement("option");
+                option.value = code + " - " + productDatabase[code].name; // Better display
+                dataList.appendChild(option);
+            }
+        }
+
+
 
     </script>
 </body>
